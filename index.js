@@ -45,7 +45,7 @@ function swapTurn() {
 
 function checkGameOver() {
   let answer = "";
-
+    //here position is like[0,1,2] or [3,4,5] similarly all//
   winningPositions.forEach((position) => {
     //all 3 boxes should be non-empty and exactly same in value
     if (
@@ -95,9 +95,9 @@ function checkGameOver() {
 
 function handleClick(index) {
   if (gameGrid[index] === "") {
-    boxes[index].innerText = currentPlayer;
-    gameGrid[index] = currentPlayer;
-    boxes[index].style.pointerEvents = "none";
+    boxes[index].innerText = currentPlayer; // yeh line uI me change krti hai//
+    gameGrid[index] = currentPlayer;  // yeh line humare gamegrid k array me change krti hai//
+    boxes[index].style.pointerEvents = "none";//ab cursor pointer nhi banenga//
     //swap karo turn ko
     swapTurn();
     //check koi jeet toh nahi gya
